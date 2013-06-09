@@ -1,2 +1,2 @@
-first_steps
-===========
+first_steps on Ruby Way
+=========== 
