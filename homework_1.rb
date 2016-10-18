@@ -16,7 +16,7 @@ class RPN_Calculator
 					when i == "/" then array << b[0] / b[1]
 					# костыль - вынести в отдельную функцию
 					when i == "!" then begin
-					# array << ugly_func()
+					# array << ugly_func(b[0], b[1])
 						temp_str = "0" + b[0].to_s(2)
 						tmp_array = temp_str.split(//)
 						index = (b[1] * -1)-1
@@ -25,7 +25,7 @@ class RPN_Calculator
 								tmp_array[index] = "0"
 								index += 1
 							end
-						b[0] = "0" + tmp_array.join('')
+						b[0] = "0" + "#{tmp_array.join('')}"
 						array << b[0].to_i(2)
 					# костыль	
 					end
@@ -42,7 +42,7 @@ a = gets.chomp
 calc.evaluate(a)
 
 def ugly_func(args*)
-//Horrible piece of shit
+//Horrible piece of ****
 	temp_str = "0" + b[0].to_s(2)
 	tmp_array = temp_str.split(//)
 	index = (b[1] * -1)-1
