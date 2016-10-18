@@ -25,7 +25,7 @@ class RPN_Calculator
 								tmp_array[index] = "0"
 								index += 1
 							end
-						b[0] = "0" + "#{tmp_array.join('')}"
+						b[0] = "0" + tmp_array.join('')
 						array << b[0].to_i(2)
 					# костыль	
 					end
@@ -41,7 +41,7 @@ p "Input rpn ex - reverse polish notation example"
 a = gets.chomp
 calc.evaluate(a)
 
-def ugly_func(args*)
+def ugly_func(args)
 //Horrible piece of ****
 	temp_str = "0" + b[0].to_s(2)
 	tmp_array = temp_str.split(//)
